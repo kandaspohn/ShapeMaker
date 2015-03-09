@@ -1,0 +1,148 @@
+package circledraw;
+import java.awt.*;
+/**
+ *
+ * @author kevin.spohn.7382
+ */
+public class Circle {
+    
+    //data members
+    private double dblRadius;
+    final public double PI = 3.142;
+    private int xcoord, ycoord;
+    Color penColor, fillColor;
+    
+    //constructor
+    public Circle(){
+    
+    }
+    public Circle(double radius){
+        setRadius(radius);
+        penColor = Color.GREEN;
+        fillColor = Color.ORANGE;
+        //set default locations
+        xcoord = 0;
+        ycoord = 0;
+                
+    }
+    //other methods
+    public double getArea(){
+        return PI * dblRadius * dblRadius;
+        //return PI * Math.pow(dblRadius, 2);
+    }
+    
+    public double getCircumference(){
+        return 2 * PI * dblRadius;
+    }
+    
+    public void setRadius(double rad){
+        dblRadius = 0;
+        if(rad > 0){
+            dblRadius = rad;
+        }
+    }
+    public void setFillColor(Color fill){
+        fillColor = fill;
+    }
+    public void setPenColot(Color pen){
+        penColor = pen;
+    }
+    public void setX(int x){
+        xcoord = 0;
+        if(x>0){
+            xcoord = x;
+        }
+    }
+    public void setY(int y){
+        ycoord = 0;
+        if (y>0){
+            ycoord = y;
+        }
+    }
+    public void draw(Graphics g){
+        int width = (int)dblRadius * 2;
+        int height = (int)dblRadius * 2;
+        
+        g.setColor(penColor);
+        g.drawOval(xcoord, ycoord, width, height);
+        g.setColor(fillColor);
+        g.fillOval(xcoord, ycoord, width, height);
+        g.dispose();
+    }
+}
+
+
+//Driver Class
+
+package circledraw;
+import java.awt.*;
+/**
+ *
+ * @author kevin.spohn.7382
+ */
+public class Circle {
+    
+    //data members
+    private double dblRadius;
+    final public double PI = 3.142;
+    private int xcoord, ycoord;
+    Color penColor, fillColor;
+    
+    //constructor
+    public Circle(){
+    
+    }
+    public Circle(double radius){
+        setRadius(radius);
+        penColor = Color.GREEN;
+        fillColor = Color.ORANGE;
+        //set default locations
+        xcoord = 0;
+        ycoord = 0;
+                
+    }
+    //other methods
+    public double getArea(){
+        return PI * dblRadius * dblRadius;
+        //return PI * Math.pow(dblRadius, 2);
+    }
+    
+    public double getCircumference(){
+        return 2 * PI * dblRadius;
+    }
+    
+    public void setRadius(double rad){
+        dblRadius = 0;
+        if(rad > 0){
+            dblRadius = rad;
+        }
+    }
+    public void setFillColor(Color fill){
+        fillColor = fill;
+    }
+    public void setPenColot(Color pen){
+        penColor = pen;
+    }
+    public void setX(int x){
+        xcoord = 0;
+        if(x>0){
+            xcoord = x;
+        }
+    }
+    public void setY(int y){
+        ycoord = 0;
+        if (y>0){
+            ycoord = y;
+        }
+    }
+    public void draw(Graphics g){
+        int width = (int)dblRadius * 2;
+        int height = (int)dblRadius * 2;
+        
+        g.setColor(penColor);
+        g.drawOval(xcoord, ycoord, width, height);
+        g.setColor(fillColor);
+        g.fillOval(xcoord, ycoord, width, height);
+        g.dispose();
+    }
+}
